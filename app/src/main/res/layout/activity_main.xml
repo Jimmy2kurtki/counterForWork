@@ -102,6 +102,8 @@
         android:fontFamily="@font/audiowide"
         android:onClick="nextActivity"
         android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/whooshColor4_grey"
         android:textSize="90sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

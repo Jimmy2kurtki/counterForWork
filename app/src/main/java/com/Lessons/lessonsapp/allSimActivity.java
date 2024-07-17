@@ -6,10 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
 
 public class allSimActivity extends AppCompatActivity {
 
@@ -26,16 +23,19 @@ public class allSimActivity extends AppCompatActivity {
                               R.id.button47,R.id.button48,R.id.button49,R.id.button50,R.id.button51,
                               R.id.button52,R.id.button53,R.id.button54,R.id.button55,R.id.button56,
                               R.id.button57,R.id.button58,R.id.button59};
+
     MainActivity main = new MainActivity();
-    private ArrayList<String> arraySim = main.getNumberSim();
+    String[] arraySim;
+
+    {
+        this.arraySim = main.getArraySim();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_sim);
-        
-        MainActivity main = new MainActivity();
         for (int i = 12; i < 60; i++) {
-
            arrayButton[i-12] = (Button) findViewById(buttons[i-12]);
         }
         visualSim();
@@ -56,15 +56,10 @@ public class allSimActivity extends AppCompatActivity {
         });
     }
 
-    public ArrayList<String> getArraySim() {
-        return arraySim;
-    }
-
 
     public void visualSim(){
-        for (int i = 0; i < arraySim.size(); i++) {
-            arraySim.add(String.valueOf(i));
-            arrayButton[i].setText(String.valueOf(arraySim.get(i)));
+        for (int i = 0; i < arraySim.length; i++) {
+            arrayButton[i].setText(arraySim[i].toString());
         }
     }
 }

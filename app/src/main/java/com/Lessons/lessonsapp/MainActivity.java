@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void setNumberSim(Button btn, EditText input) {
+    public void setNumberSim(Button btn, EditText in) {
         if (btn.equals(easy)) {
             intEasySim++;
             easySim.setText(String.valueOf(intEasySim));
@@ -51,11 +51,13 @@ public class MainActivity extends AppCompatActivity {
             hardSim.setText(String.valueOf(intHardSim));
         }
         allSim.setText(String.valueOf(intEasySim+intMiddleSim+intHardSim));
-        arraySim[count] = String.valueOf(input);
+        arraySim[count] = String.valueOf(in.getText());
         count++;
     }
 
-
+    public String[] getArraySim(){
+        return this.arraySim;
+    }
 
     public void nextActivity(View v) {
         Intent intent = new Intent(this,allSimActivity.class);
@@ -71,21 +73,20 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle(text)
                 .setMessage("Какой номер сэмика?")
                 .setCancelable(false);
-        final EditText input = new EditText(this);
-        builder.setView(input)
-                .setPositiveButton("этот", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        setNumberSim(btn,input);
-                        dialogInterface.cancel();
-                    }
-                })
-                .setNegativeButton("НАЗАД", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
+        EditText input = new EditText(this);
+        builder.setView(input);
+        builder.setPositiveButton("этот", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                setNumberSim(btn, input);
+            }
+        });
+        builder.setNegativeButton("НАЗАД", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
         AlertDialog dialog = builder.create();
         dialog.show();
 
