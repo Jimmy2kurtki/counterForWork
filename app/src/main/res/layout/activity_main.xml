@@ -58,22 +58,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/allSim"
-        android:layout_width="388dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="108dp"
-        android:fontFamily="@font/audiowide"
-        android:textAlignment="center"
-        android:textColor="@color/whooshColor4_grey"
-        android:textSize="96sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="22" />
-
-    <TextView
         android:id="@+id/easySim"
         android:layout_width="107dp"
         android:layout_height="77dp"
@@ -82,11 +66,8 @@
         android:textAlignment="center"
         android:textColor="@color/whooshColor2_white"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/allSim"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516"
-        tools:text="10" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/middleSim"
@@ -96,13 +77,9 @@
         android:textAlignment="center"
         android:textColor="@color/whooshColor3_red"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/allSim"
         app:layout_constraintEnd_toStartOf="@+id/hardSim"
-        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toEndOf="@+id/easySim"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516"
-        tools:text="8" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/hardSim"
@@ -113,9 +90,22 @@
         android:textAlignment="center"
         android:textColor="@color/whooshColor4_grey"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/allSim"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516"
-        tools:text="4" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/allSim"
+        android:layout_width="378dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="@color/whooshColor1_orange"
+        android:fontFamily="@font/audiowide"
+        android:onClick="nextActivity"
+        android:text="0"
+        android:textSize="90sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
