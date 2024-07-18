@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/whooshColor1_orange"
+    tools:context=".ButtonFragment">
+
+    <Button
+        android:id="@+id/easy"
+        android:layout_width="234dp"
+        android:layout_height="137dp"
+        android:backgroundTint="@color/white"
+        android:onClick="btnClick"
+        android:text="@string/easy"
+        android:textAllCaps="false"
+        android:textColor="@color/whooshColor4_grey"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hard"
+        android:layout_width="234dp"
+        android:layout_height="137dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/whooshColor4_grey"
+        android:onClick="btnClick"
+        android:text="@string/hard"
+        android:textColor="@color/whooshColor2_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/middle"
+        android:layout_width="234dp"
+        android:layout_height="137dp"
+        android:backgroundTint="@color/whooshColor3_red"
+        android:onClick="btnClick"
+        android:text="@string/middle"
+        android:textColor="@color/whooshColor4_grey"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/hard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</FrameLayout>

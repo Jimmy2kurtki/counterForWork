@@ -3,4 +3,9 @@
     <string name="easy">ХАЛЯВНЫЙ</string>
     <string name="middle">НОРМАЛЬНЫЙ</string>
     <string name="hard">УБЛЮДСКИЙ</string>
+    <string name="qS">Номер сэмика</string>
+    <string name="YES">ГОТОВО</string>
+    <string name="NO">НАЗАД</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
